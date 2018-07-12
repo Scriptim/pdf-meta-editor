@@ -1,0 +1,26 @@
+{
+  "name": "pdf-meta-editor",
+  "version": "0.0.0",
+  "description": "Interactive cli for changing meta data of pdf files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scriptim/pdf-meta-editor.git"
+  },
+  "keywords": [
+    "metadata",
+    "pdf",
+    "exiftool",
+    "cli",
+    "tool"
+  ],
+  "author": "Scriptim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Scriptim/pdf-meta-editor/issues"
+  },
+  "homepage": "https://github.com/Scriptim/pdf-meta-editor#readme"
+}
