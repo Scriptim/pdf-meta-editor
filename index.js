@@ -3,10 +3,12 @@
 
 const metadataEditor = require('./metadata_editor.js')
 
-if (process.argv.length !== 3) {
+const argv = require('minimist')(process.argv.slice(2))
+
+if (argv._.length !== 1) {
   process.stderr.write('Usage: pdf-meta-editor FILENAME\n')
   process.exit(1)
 }
 
-const filename = process.argv[2]
+const filename = argv._[0]
 metadataEditor.useFile(filename)
