@@ -1,7 +1,7 @@
 {
   "name": "pdf-meta-editor",
   "version": "1.0.2",
-  "description": "Interactive cli for changing meta data of pdf files",
+  "description": "Interactive cli for changing metadata of pdf files",
   "main": "index.js",
   "bin": {
     "pdf-meta-editor": "index.js"

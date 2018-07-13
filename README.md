@@ -1,6 +1,6 @@
 # pdf-meta-editor
 
-Interactive cli for changing meta data of pdf files.
+Interactive cli for changing metadata of pdf files.
 
 ![Demo](demo.gif "Demo")
 
