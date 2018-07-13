@@ -1,3 +1,5 @@
+// Copyright 2018 Scriptim (see LICENSE.md)
+
 const nodeExiftool = require('node-exiftool')
 const exiftool = new nodeExiftool.ExiftoolProcess(require('dist-exiftool'))
 const readlineSync = require('readline-sync')

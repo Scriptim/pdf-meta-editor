@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// Copyright 2018 Scriptim (see LICENSE.md)
 
 const metadataEditor = require('./metadata_editor.js')
 
