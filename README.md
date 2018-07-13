@@ -24,9 +24,8 @@ Show this help page.
 
     pdf-meta-editor
 
-    Usage: pdf-meta-editor FILENAME
-        pdf-meta-editor (-h|-v)
-        pdf-meta-editor -p FILENAME
+    Usage: pdf-meta-editor FILENAME [-p]
+           pdf-meta-editor (-h|-v)
 
     options
     -h --help     Show this help page.
