@@ -51,6 +51,7 @@ Print the metadata instead of editing it.
     FileAccessDate: 2018:07:13 23:16:38+02:00
     FilePermissions: rw-r--r--
     PDFVersion: 1.3
+    PageCount: 1
     Linearized: No
 
     Title: Demo Title
