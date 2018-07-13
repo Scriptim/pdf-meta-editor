@@ -16,6 +16,10 @@ Interactive cli for changing metadata of pdf files.
 
 ### Command Line Arguments
 
+#### `-v/--version`
+
+Print the currently installed version.
+
 #### `-p/--print`
 
 Print the metadata instead of editing it.
