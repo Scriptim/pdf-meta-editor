@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/Scriptim/pdf-meta-editor/issues"
   },
-  "homepage": "https://github.com/Scriptim/pdf-meta-editor#readme"
+  "homepage": "https://github.com/Scriptim/pdf-meta-editor#readme",
+  "dependencies": {
+    "dist-exiftool": "^10.53.0",
+    "node-exiftool": "^2.3.0"
+  }
 }
