@@ -8,9 +8,8 @@ const argv = require('minimist')(process.argv.slice(2))
 
 const helpPage = `pdf-meta-editor
 
-Usage: pdf-meta-editor FILENAME
+Usage: pdf-meta-editor FILENAME [-p]
        pdf-meta-editor (-h|-v)
-       pdf-meta-editor -p FILENAME
 
 options
   -h --help     Show this help page.
