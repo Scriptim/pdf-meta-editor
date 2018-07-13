@@ -12,6 +12,7 @@ const metatags = [
     'FileAccessDate',
     'FilePermissions',
     'PDFVersion',
+    'PageCount',
     'Linearized'
   ],
   [
