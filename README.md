@@ -16,6 +16,23 @@ Interactive cli for changing metadata of pdf files.
 
 ### Command Line Arguments
 
+#### `-h/--help`
+
+Show this help page.
+
+##### Example
+
+    pdf-meta-editor
+
+    Usage: pdf-meta-editor FILENAME
+        pdf-meta-editor (-h|-v)
+        pdf-meta-editor -p FILENAME
+
+    options
+    -h --help     Show this help page.
+    -v --version  Print the currently installed version.
+    -p --print    Print the metadata instead of editing it.
+
 #### `-v/--version`
 
 Print the currently installed version.
