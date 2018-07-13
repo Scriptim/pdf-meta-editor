@@ -6,6 +6,11 @@ const metadataPrinter = require('./metadata_printer.js')
 
 const argv = require('minimist')(process.argv.slice(2))
 
+if (argv.v === true || argv.version === true) {
+  process.stdout.write(`${process.version}\n`)
+  process.exit(0)
+}
+
 if (argv._.length !== 1) {
   process.stderr.write('Usage: pdf-meta-editor [options] FILENAME\n')
   process.exit(1)
