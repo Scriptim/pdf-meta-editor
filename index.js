@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const metadataEditor = require('./metadata_editor.js')
 
 if (process.argv.length !== 3) {

@@ -3,6 +3,9 @@
   "version": "1.0.0-alpha",
   "description": "Interactive cli for changing meta data of pdf files",
   "main": "index.js",
+  "bin": {
+    "pdf-meta-editor": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
