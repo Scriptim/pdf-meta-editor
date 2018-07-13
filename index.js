@@ -6,3 +6,4 @@ if (process.argv.length !== 3) {
 }
 
 const filename = process.argv[2]
+metadataEditor.useFile(filename)
