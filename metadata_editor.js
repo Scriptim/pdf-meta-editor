@@ -1,5 +1,6 @@
 const nodeExiftool = require('node-exiftool')
 const exiftool = new nodeExiftool.ExiftoolProcess(require('dist-exiftool'))
+const readlineSync = require('readline-sync')
 
 const metatags = [
   'FileType',
@@ -17,15 +18,10 @@ const useFile = filename => {
   exiftool
     .open()
     .then(console.log)
-    .then(() => readMetadata(filename))
-    .then(console.log)
-    .then(() => writeMetadata({
-      SourceFile: 'test.pdf',
-      Title: 'Test Title',
-      Author: 'Test Author',
-      Subject: 'Test Subject',
-      Producer: 'Test Producer'
-    }))
+    .then(() => filename)
+    .then(readMetadata)
+    .then(requestMetadata)
+    .then(writeMetadata)
     .then(() => exiftool.close())
     .catch(console.error)
 }
@@ -43,6 +39,28 @@ const readMetadata = filename => {
     })
 }
 
+const requestMetadata = metadata => {
+  const newMetadata = {
+    OutputFile: metadata.SourceFile
+  }
+  for (let tag of metatags) {
+    if (tag === 'FileType') {
+      continue
+    }
+
+    const options = {}
+    let question = `${tag}: `
+    if (metadata[tag]) {
+      options.defaultInput = metadata[tag]
+      question = `${tag} [${metadata[tag]}]: `
+    }
+    const answer = readlineSync.question(question, options)
+    newMetadata[tag] = answer
+  }
+
+  return newMetadata
+}
+
 const writeMetadata = data => {
   const metadata = {}
   for (let tag of metatags) {
@@ -51,7 +69,7 @@ const writeMetadata = data => {
     }
     metadata[tag] = data[tag]
   }
-  return exiftool.writeMetadata(data.SourceFile, metadata)
+  return exiftool.writeMetadata(data.OutputFile, metadata)
 }
 
-module.exports = { useFile, readMetadata, writeMetadata }
+module.exports = { useFile }
