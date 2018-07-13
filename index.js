@@ -4,7 +4,7 @@
 const metadataEditor = require('./metadata_editor.js')
 
 if (process.argv.length !== 3) {
-  console.log('Usage: pdf-meta-editor FILENAME')
+  process.stderr.write('Usage: pdf-meta-editor FILENAME\n')
   process.exit(1)
 }
 
