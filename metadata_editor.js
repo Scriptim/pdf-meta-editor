@@ -20,6 +20,13 @@ exiftool
   .then(console.log)
   .then(() => readMetadata(filename))
   .then(console.log)
+  .then(() => writeMetadata({
+    SourceFile: 'test.pdf',
+    Title: 'Test Title',
+    Author: 'Test Author',
+    Subject: 'Test Subject',
+    Producer: 'Test Producer'
+  }))
   .then(() => exiftool.close())
   .catch(console.error)
 
@@ -34,4 +41,15 @@ const readMetadata = filename => {
       }
       return metadata.data[0]
     })
+}
+
+const writeMetadata = data => {
+  const metadata = {}
+  for (let tag of metatags) {
+    if (tag === 'FileType') {
+      continue
+    }
+    metadata[tag] = data[tag]
+  }
+  return exiftool.writeMetadata(data.SourceFile, metadata)
 }
