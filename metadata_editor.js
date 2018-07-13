@@ -1,6 +1,7 @@
 const nodeExiftool = require('node-exiftool')
 const exiftool = new nodeExiftool.ExiftoolProcess(require('dist-exiftool'))
 const readlineSync = require('readline-sync')
+const chalk = require('chalk')
 
 const metatags = [
   'FileType',
@@ -15,15 +16,18 @@ const metatags = [
 ]
 
 const useFile = filename => {
+  process.stdout.write(`Editing file ${chalk.bold(filename)}\n`)
   exiftool
     .open()
-    .then(console.log)
     .then(() => filename)
     .then(readMetadata)
     .then(requestMetadata)
     .then(writeMetadata)
     .then(() => exiftool.close())
-    .catch(console.error)
+    .catch(err => {
+      process.stderr.write(chalk.red.bold(err.message, '\n'))
+      process.exit(1)
+    })
 }
 
 const readMetadata = filename => {
@@ -52,7 +56,7 @@ const requestMetadata = metadata => {
     let question = `${tag}: `
     if (metadata[tag]) {
       options.defaultInput = metadata[tag]
-      question = `${tag} [${metadata[tag]}]: `
+      question = tag + ' ' + chalk.dim(`[${metadata[tag]}]`) + ': '
     }
     const answer = readlineSync.question(question, options)
     newMetadata[tag] = answer
