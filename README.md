@@ -27,9 +27,10 @@ Show this help page.
            pdf-meta-editor (-h|-v)
 
     options
-    -h --help     Show this help page.
-    -v --version  Print the currently installed version.
-    -p --print    Print the metadata instead of editing it.
+      -h --help      Show this help page.
+      -v --version   Print the currently installed version.
+      -p --print     Print the metadata instead of editing it.
+      -o --overwrite Overwrite the original file.
 
 #### `-v/--version`
 
@@ -61,3 +62,9 @@ Print the metadata instead of editing it.
     Creator: Demo Creator
     Producer: Demo Producer
     Keywords: demo,pdf,file
+
+#### `-o/--overwrite`
+
+Overwrite the original file.
+
+If not specified, the original file is retained by default.
