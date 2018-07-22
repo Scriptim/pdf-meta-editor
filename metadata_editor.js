@@ -17,14 +17,14 @@ const metatags = [
   'Keywords'
 ]
 
-const useFile = filename => {
+const useFile = (filename, args) => {
   process.stdout.write(`Editing file ${chalk.bold(filename)}\n`)
   exiftool
     .open()
     .then(() => filename)
     .then(readMetadata)
     .then(requestMetadata)
-    .then(writeMetadata)
+    .then(data => writeMetadata(data, args))
     .then(() => exiftool.close())
     .catch(err => {
       process.stderr.write(chalk.red.bold(err.message, '\n'))
@@ -67,7 +67,7 @@ const requestMetadata = metadata => {
   return newMetadata
 }
 
-const writeMetadata = data => {
+const writeMetadata = (data, args) => {
   const metadata = {}
   for (let tag of metatags) {
     if (tag === 'FileType') {
@@ -75,7 +75,7 @@ const writeMetadata = data => {
     }
     metadata[tag] = data[tag]
   }
-  return exiftool.writeMetadata(data.OutputFile, metadata)
+  return exiftool.writeMetadata(data.OutputFile, metadata, args)
 }
 
 module.exports = { useFile }
