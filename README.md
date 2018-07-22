@@ -20,8 +20,7 @@ Interactive cli for changing metadata of pdf files.
 
 Show this help page.
 
-##### Example
-
+    $ pdf-meta-editor --help
     pdf-meta-editor
 
     Usage: pdf-meta-editor FILENAME [-p]
@@ -42,7 +41,7 @@ Print the metadata instead of editing it.
 
 ##### Example
 
-    $ pdf-meta-editor --print Demo.pdf
+    $ pdf-meta-editor Demo.pdf --print
     Printing metadata of file Demo.pdf
 
     FileType: PDF
