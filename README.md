@@ -28,7 +28,7 @@ Show this help page.
     $ pdf-meta-editor --help
     pdf-meta-editor
 
-    Usage: pdf-meta-editor FILENAME [-p]
+    Usage: pdf-meta-editor FILENAME [-p|-o]
            pdf-meta-editor (-h|-v)
 
     options
@@ -52,8 +52,8 @@ Print the metadata instead of editing it.
 
     FileType: PDF
     FileSize: 5.7 kB
-    FileModifyDate: 2018:07:13 00:00:00+02:00
-    FileAccessDate: 2018:07:13 23:16:38+02:00
+    FileModifyDate: 2018:07:13 00:00:00+00:00
+    FileAccessDate: 2018:07:13 12:00:00+00:00
     FilePermissions: rw-r--r--
     PDFVersion: 1.3
     PageCount: 1
@@ -63,7 +63,7 @@ Print the metadata instead of editing it.
     Author: Demo Author
     Subject: Demo Subject
     CreateDate: 2018:07:13 00:00:00
-    FileModifyDate: 2018:07:13 00:00:00+02:00
+    FileModifyDate: 2018:07:13 00:00:00+00:00
     Creator: Demo Creator
     Producer: Demo Producer
     Keywords: demo,pdf,file
