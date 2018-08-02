@@ -1,5 +1,10 @@
 # pdf-meta-editor
 
+[![version (npm)](https://img.shields.io/npm/v/pdf-meta-editor.svg?style=flat-square)](https://www.npmjs.com/package/pdf-meta-editor)
+[![license (GitHub)](https://img.shields.io/github/license/Scriptim/pdf-meta-editor.svg?longCache=true&style=flat-square)](https://github.com/Scriptim/pdf-meta-editor/blob/master/LICENSE.md)
+[![downloads (npm)](https://img.shields.io/npm/dt/pdf-meta-editor.svg?style=flat-square)](https://www.npmjs.com/package/pdf-meta-editor)
+[![dependencies (libraries.io)](https://img.shields.io/librariesio/release/npm/pdf-meta-editor.svg?style=flat-square)](https://libraries.io/npm/pdf-meta-editor)
+
 Interactive cli for changing metadata of pdf files.
 
 ![Demo](demo.gif "Demo")
