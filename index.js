@@ -24,7 +24,8 @@ if (argv.h === true || argv.help === true) {
 }
 
 if (argv.v === true || argv.version === true) {
-  process.stdout.write(`${process.version}\n`)
+  const {version} = require('./package.json')
+  process.stdout.write(`${version}\n`)
   process.exit(0)
 }
 
