@@ -29,8 +29,8 @@
   "dependencies": {
     "chalk": "^4.0.0",
     "dist-exiftool": "^10.53.0",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.5",
     "node-exiftool": "^2.3.0",
-    "readline-sync": "^1.4.9"
+    "readline-sync": "^1.4.10"
   }
 }
