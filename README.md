@@ -7,7 +7,7 @@
 
 Interactive cli for changing metadata of pdf files.
 
-![Demo](demo.gif "Demo")
+![Demo](https://raw.githubusercontent.com/Scriptim/pdf-meta-editor/master/demo.gif "Demo")
 
 <https://www.npmjs.com/package/pdf-meta-editor>
 
