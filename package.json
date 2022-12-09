@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/Scriptim/pdf-meta-editor#readme",
   "dependencies": {
-    "chalk": "^4.0.0",
+    "chalk": "^5.2.0",
     "dist-exiftool": "^10.53.0",
     "minimist": "^1.2.5",
     "node-exiftool": "^2.3.0",
